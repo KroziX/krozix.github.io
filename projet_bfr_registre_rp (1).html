@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BFR — Finance ¥</title>
+  <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=ISXGg52fQQMQB3o86r_Rr3zKkD0xT7xQTWjVBiJNp30lEhnwanWtcIrxUrzJAtLU_HHNm2zD1WPJlpq3D31TTYcf1onon-xjo-TedF5rOvrS3DMzndjbSFhIZ9UkOsYd7Hmg5asKsfO0XitgDPD6qTk7NCxO1-Bnj9j3G2hedPk8WrtlLGd4HQIqyTM_yq0RMM-7SzHJwRkNtzg32sIulGHmZ8O8b7pqA_NiSq-x7S6pihUIL_tfqInpS5dPAgXnHvcBjb6CTNuxKnG1Jef1xW8e111-cc0rMnhquwW4SKQ" charset="UTF-8"></script><style>
+    :root{--bg:#070604;--side:#0d0c0a;--card:#14110c;--card2:#1d170d;--line:#3a2b12;--text:#fff6df;--muted:#b9ab86;--gold:#ffd166;--gold2:#ffb703;--red:#ff5c7a;--green:#35d07f;--blue:#63a4ff;--radius:20px;--shadow:0 20px 50px rgba(0,0,0,.45)}
+    *{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at top left,rgba(255,209,102,.13),transparent 28%),linear-gradient(180deg,#050403,#100c06);color:var(--text);font-family:Inter,system-ui,Segoe UI,sans-serif} 
+    .app{display:grid;grid-template-columns:285px 1fr 330px;min-height:100vh}.sidebar,.right{background:rgba(13,12,10,.92);border-right:1px solid var(--line);padding:18px}.right{border-right:0;border-left:1px solid var(--line)}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:950;color:var(--gold);margin-bottom:22px}.brand .coin{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1102;font-weight:1000}
+    .nav button{width:100%;display:flex;align-items:center;gap:12px;margin:7px 0;padding:13px;border:1px solid transparent;border-radius:14px;background:transparent;color:var(--text);font-size:1rem;text-align:left;cursor:pointer}.nav button.active,.nav button:hover{background:linear-gradient(135deg,rgba(255,209,102,.17),rgba(255,183,3,.06));border-color:var(--line);color:var(--gold)}
+    .profile{margin-top:40px;padding:18px;border:1px solid var(--line);border-radius:22px;background:var(--card2);text-align:center}.avatar{width:70px;height:70px;border-radius:50%;margin:auto;display:grid;place-items:center;background:linear-gradient(135deg,var(--gold),#8b5e00);color:#1a1102;font-size:2.3rem;font-weight:1000;border:3px solid rgba(255,255,255,.1)}
+    main{padding:22px;overflow:auto}.top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:18px}.title{display:flex;align-items:center;gap:12px}.title h1{margin:0;font-size:2rem}.pill{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:10px 14px;color:var(--gold);font-weight:850}
+    button.action{border:1px solid var(--line);background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1102;border-radius:13px;padding:12px 15px;font-weight:950;cursor:pointer}.ghost{background:transparent!important;color:var(--text)!important}.danger{background:var(--red)!important;color:white!important}
+    .hero{border:1px solid var(--line);border-radius:24px;padding:20px;background:linear-gradient(135deg,rgba(255,209,102,.15),rgba(255,183,3,.04)),var(--card);box-shadow:var(--shadow);display:grid;grid-template-columns:1.2fr 1fr;gap:18px;margin-bottom:18px}.banner{min-height:190px;border-radius:20px;background:radial-gradient(circle at 20% 30%,rgba(255,209,102,.42),transparent 22%),linear-gradient(135deg,#271806,#0b0804);border:1px solid var(--line);display:grid;place-items:center;text-align:center;position:relative;overflow:hidden}.banner:before,.banner:after{content:'¥';position:absolute;font-size:9rem;font-weight:1000;color:rgba(255,209,102,.12)}.banner:before{left:25px}.banner:after{right:25px}.banner h2{font-size:3rem;margin:0;color:var(--gold);text-shadow:0 0 25px rgba(255,183,3,.35)}.heroText{padding:15px;border:1px solid var(--line);border-radius:20px;background:rgba(0,0,0,.18)}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}.stat{padding:17px;border:1px solid var(--line);border-radius:18px;background:var(--card)}.stat span{color:var(--muted);font-size:.92rem}.stat strong{display:block;color:var(--gold);font-size:1.45rem;margin-top:6px}
+    .panel{display:none}.panel.active{display:block}.card{border:1px solid var(--line);border-radius:22px;background:var(--card);padding:20px;box-shadow:var(--shadow)}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}label{display:block;color:var(--gold);font-weight:850;margin:12px 0 7px}input,select,textarea{width:100%;background:#080705;color:var(--text);border:1px solid var(--line);border-radius:13px;padding:12px;font:inherit}textarea{min-height:95px}.chips{display:flex;gap:8px;flex-wrap:wrap}.chip{border:1px solid var(--line);background:var(--card2);border-radius:999px;padding:8px 10px}.chip input{width:auto}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+    table{width:100%;border-collapse:collapse}th,td{padding:13px;border-bottom:1px solid var(--line);text-align:left}th{color:var(--muted);font-weight:800}td .name{font-weight:850;color:#ff8fb0}.paid{color:var(--green);font-weight:850}.wait{color:var(--gold2);font-weight:850}.bad{color:var(--red);font-weight:850}.small{color:var(--muted);font-size:.9rem}pre{white-space:pre-wrap;background:#080705;border:1px solid var(--line);border-radius:16px;padding:16px}.taxRow{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line)}.taxRow strong{color:var(--gold)}.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--gold);color:#1a1102;padding:12px 16px;border-radius:999px;opacity:0;transition:.25s;font-weight:950}.toast.show{opacity:1}
+    @media(max-width:1100px){.app{grid-template-columns:1fr}.sidebar,.right{display:none}.hero{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}}@media(max-width:650px){.stats{grid-template-columns:1fr}.top{display:block}.top .actions{margin-top:10px}}
+  </style>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><div class="coin">¥</div><div>Brigade des Finances<br><span class="small">et Relations</span></div></div>
+    <div class="nav">
+      <button class="active" data-tab="dashboard">📊 Tableau de bord</button><button data-tab="new">💰 Nouvelle entrée</button><button data-tab="taxes">🏦 Impôts</button><button data-tab="judiciaire">📗 Section judiciaire</button><button data-tab="registry">🗂 Registre</button><button data-tab="export">✦ Export RP</button>
+    </div>
+    <div class="profile"><div class="avatar">¥</div><h3>Yūgen | Pourfendeur</h3><p class="small">Conseiller du Maître · BFR</p></div>
+  </aside>
+  <main>
+    <div class="top"><div class="title"><span class="pill">💰 Impôts</span><h1>Registre financier ¥</h1></div><div class="actions"><button class="action" onclick="showTab('new')">+ Nouvelle entrée</button><button class="action ghost" onclick="exportJSON()">Exporter JSON</button></div></div>
+    <section class="hero"><div class="banner"><div><h2>財務 & 関連</h2><p>Finance & Relations Brigade</p></div></div><div class="heroText"><h2>Registre des taxes collectées</h2><p>Suivi des impôts, primes, salaires et mouvements de trésorerie en yens.</p><p class="small">Mise à jour recommandée chaque semaine après la cérémonie du samedi.</p></div></section>
+    <section class="stats"><div class="stat"><span>Total collecté</span><strong id="inStat">0 ¥</strong></div><div class="stat"><span>À récupérer / sorties</span><strong id="outStat">0 ¥</strong></div><div class="stat"><span>Membres à jour</span><strong id="paidStat">0 / 0</strong></div><div class="stat"><span>Solde trésorerie</span><strong id="balanceStat">0 ¥</strong></div></section>
+
+    <section id="dashboard" class="panel active">
+      <div class="card">
+        <h2>📊 Tableau de bord financier</h2>
+        <p class="small">Toutes les entrées sauvegardées depuis les salons Impôts, Primes, Judiciaire et Nouvelle entrée arrivent ici.</p>
+        <input id="search" placeholder="Rechercher un membre, type, statut..." oninput="render()">
+        <div style="overflow:auto;margin-top:14px">
+          <table>
+            <thead><tr><th>Membre</th><th>Statut</th><th>Salon</th><th>Montant</th><th>Date</th><th>Actions</th></tr></thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+        <div class="actions"><button class="action danger" onclick="deleteAll()">Tout supprimer</button></div>
+      </div>
+      <br>
+      <div class="card"><h2>Dernières opérations</h2><div id="latest"></div></div>
+    </section>
+    <section id="new" class="panel"><div class="card"><h2>Nouvelle opération</h2><div class="grid"><div><label>Membre</label><input id="personne" placeholder="Ex : Akira Tendo"><label>Type</label><select id="type"><option>Impôt collecté</option><option>Prime versée</option><option>Salaire</option><option>Amende reçue</option><option>Dépôt trésorerie</option><option>Retrait trésorerie</option></select></div><div><label>Grade</label><select id="souffle"><option>Kanoe</option><option>Tsuchinoto</option><option>Tsuchinoe</option><option>Hinoto</option><option>Hinoe</option><option>Kinoto</option><option>Kinoe</option><option>Pilier</option></select><label>Montant ¥</label><input id="montant" type="number" placeholder="960000"><label>Statut</label><select id="statut"><option>Payé</option><option>En attente</option><option>Refusé</option></select><label>Date</label><input id="date" type="date"></div></div><label>Note RP</label><textarea id="note" placeholder="Contexte, preuve, raison du paiement..."></textarea><div class="actions"><button class="action" onclick="saveEntry()">Sauvegarder les yens</button><button class="action ghost" onclick="generateRP()">Générer RP</button><button class="action danger" onclick="clearForm()">Effacer</button></div></div></section>
+    <section id="taxes" class="panel">
+      <div class="card">
+        <h2>🏦 Salon Impôts</h2>
+        <p class="small">Choisis un grade, sauvegarde, et l'entrée part directement dans le tableau de bord.</p>
+        <div class="grid">
+          <div>
+            <label>Membre</label><input id="taxPerson" placeholder="Ex : Akira Tendo">
+            <label>Grade</label><select id="taxGrade" onchange="updateTaxAmount()"><option>Kanoe</option><option>Tsuchinoto</option><option>Tsuchinoe</option><option>Hinoto</option><option>Hinoe</option><option>Kinoto</option><option>Kinoe</option><option>Pilier</option></select>
+            <label>Statut</label><select id="taxStatus"><option>Payé</option><option>En attente</option><option>Refusé</option></select>
+          </div>
+          <div>
+            <label>Montant ¥</label><input id="taxAmount" type="number" placeholder="60000">
+            <label>Date</label><input id="taxDate" type="date">
+            <label>Note</label><textarea id="taxNote" placeholder="Taxe hebdomadaire, preuve, semaine..."></textarea>
+          </div>
+        </div>
+        <div class="actions"><button class="action" onclick="saveTaxEntry()">Sauvegarder l'impôt</button></div>
+        <h2 style="margin-top:22px">Barème des grades</h2><div id="taxList"></div>
+      </div>
+    </section>
+    
+    <section id="judiciaire" class="panel"><div class="card"><h2>📗 Section judiciaire</h2><p class="small">Barème RP des amendes, juridictions et modèles de rapports judiciaires.</p><div class="grid"><div><label>Personne sanctionnée</label><input id="j_personne" placeholder="Ex : Hakai"><label>Amende appliquée par</label><input id="j_agent" placeholder="Ex : Shigi / BFR"><label>⚖️ Blâme (niveau d'amende)</label><select id="j_blame" title="Choisis le niveau de sanction">
+              <option>Avertissement</option>
+              <option>Blâme 1 — 80 000 ¥</option><option>Blâme 2 — 100 000 ¥</option><option>Blâme 3 — 150 000 ¥</option></select><label>Taxe de juridiction</label><select id="j_juridiction"><option>🌫️ Souffle de la Brume</option><option>🔥 Souffle de la Flamme</option><option>🌊 Souffle de l’Eau</option><option>🌩️ Souffle de la Foudre</option><option>🌸 Souffle de la Fleur</option><option>🎶 Souffle du Son</option><option>🪨 Souffle de la Roche</option></select></div><div><label>Motif / raison</label><textarea id="j_raison" placeholder="Raison de l’amende..."></textarea><label>Date / semaine</label><input id="j_date" placeholder="Ex : Semaine du 06/10/25 au 12/10/25"><label>Montant personnalisé</label><input id="j_montant" type="number" placeholder="Ex : 80000"></div></div><h2 style="margin-top:22px">Barème des sanctions</h2><div class="taxRow"><span>Blâme 1</span><strong>80 000 ¥</strong></div><div class="taxRow"><span>Blâme 2</span><strong>100 000 ¥</strong></div><div class="taxRow"><span>Blâme 3</span><strong>150 000 ¥</strong></div><h2 style="margin-top:22px">Barème des amendes</h2><div class="taxRow"><span>Ne se rend pas en zone de rassemblement si convoqué</span><strong>60 000 à 250 000 ¥</strong></div><div class="taxRow"><span>Coupe fratricide</span><strong>70 000 à 250 000 ¥</strong></div><div class="taxRow"><span>Insultes et manque de respect</span><strong>60 000 à 260 000 ¥</strong></div><div class="taxRow"><span>Comportement inapproprié en zone de rassemblement</span><strong>60 000 à 260 000 ¥</strong></div><div class="taxRow"><span>Katana dégainé en dehors des terrains / utilisation de souffle</span><strong>50 000 à 250 000 ¥</strong></div><div class="actions"><button class="action" onclick="saveJudiciaireEntry()">Sauvegarder amende</button><button class="action ghost" onclick="generateJudiciaireRP()">Générer rapport judiciaire</button></div></div></section>
+    
+    <section id="registry" class="panel">
+  <div class="card">
+    <h2>📋 Registre de formations</h2>
+    <p class="small">Utilise ce modèle pour enregistrer les formations comme sur Discord.</p>
+
+    <label>Professeur</label>
+    <input id="f_prof" placeholder="Ex : Yūgen">
+
+    <label>Cadet / financier</label>
+    <input id="f_cadet" placeholder="Ex : Narumi">
+
+    <label>Grade / souffle</label>
+    <input id="f_grade" placeholder="Ex : Kinoe / Souffle de l’Eau">
+
+    <label>Spécialisation choisie</label>
+    <input id="f_spec" placeholder="Ex : Finance / Médical">
+
+    <label>Steam ID</label>
+    <input id="f_steam" placeholder="Ex : STEAM_0:1:XXXXX">
+
+    <div class="actions">
+      <button class="action" onclick="generateFormationRP()">Générer registre RP</button>
+    </div>
+  </div>
+</section>
+    
+    <section id="export" class="panel"><div class="card"><h2>Export RP</h2><pre id="rp">Aucun message généré.</pre><div class="actions"><button class="action" onclick="copyRP()">Copier</button><button class="action ghost" onclick="generateSummaryRP()">Résumé hebdo</button></div></div></section>
+  </main>
+  <aside class="right"><div class="card"><h2>Résumé rapide</h2><div id="quickTaxes"></div></div><br><div class="card"><h2>Informations</h2><p class="small">Le montant des taxes est basé sur le souffle ou le rang. Le registre reste sauvegardé sur ce navigateur.</p><button class="action ghost" onclick="showTab('taxes')">Voir le règlement</button></div></aside>
+</div><div id="toast" class="toast">OK</div>
+<script>
+const key='bfr_yens_discord_v2';const fields=['personne','type','souffle','montant','statut','date','note'];const $=id=>document.getElementById(id);const fmt=n=>Number(n||0).toLocaleString('fr-FR')+' ¥';
+const taxes=[['💰 Kanoe',60000],['💰 Tsuchinoto',80000],['💰 Tsuchinoe',100000],['💰 Hinoto',120000],['💰 Hinoe',140000],['💰 Kinoto',160000],['💰 Kinoe',500000],['💰 Pilier',750000]];
+const gradeAmounts={Kanoe:60000,Tsuchinoto:80000,Tsuchinoe:100000,Hinoto:120000,Hinoe:140000,Kinoto:160000,Kinoe:500000,Pilier:750000};
+window.onload=()=>{if($('date'))$('date').valueAsDate=new Date();if($('taxDate'))$('taxDate').valueAsDate=new Date();renderTaxes();updateTaxAmount();render();};document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>showTab(b.dataset.tab));
+function showTab(id){document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab===id));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id));}
+function data(){let o=Object.fromEntries(fields.map(f=>[f,$(f)?.value||'']));o.montant=Number(o.montant||0);o.createdAt=new Date().toISOString();return o}function list(){return JSON.parse(localStorage.getItem(key)||'[]')}function saveList(l){localStorage.setItem(key,JSON.stringify(l))}
+function isOut(r){return ['Prime versée','Salaire','Retrait trésorerie'].includes(r.type)}function signed(r){return isOut(r)?-r.montant:r.montant}
+function saveEntry(){let l=list();l.unshift(data());saveList(l);render();toast('Entrée sauvegardée')}function clearForm(){fields.forEach(f=>{if($(f))$(f).value=''});$('date').valueAsDate=new Date();toast('Formulaire vidé')}
+function renderTaxes(){let html=taxes.map(t=>`<div class="taxRow"><span>${t[0]}</span><strong>${fmt(t[1])}</strong></div>`).join('')+`<div class="taxRow"><span>Total barème</span><strong>${fmt(taxes.reduce((a,b)=>a+b[1],0))}</strong></div>`;$('taxList').innerHTML=html;$('quickTaxes').innerHTML=html}
+function updateTaxAmount(){if(!$('taxGrade'))return;$('taxAmount').value=gradeAmounts[$('taxGrade').value]||0}
+
+function addFinanceEntry(entry){let l=list();l.unshift(entry);saveList(l);render();showTab('dashboard');toast('Yens sauvegardés')}
+function saveTaxEntry(){let amount=Number($('taxAmount').value||0);if(!amount){toast('Montant invalide');return}addFinanceEntry({personne:$('taxPerson').value||'Membre inconnu',souffle:$('taxGrade').value||'—',type:'Impôt collecté',montant:amount,statut:$('taxStatus').value||'Payé',date:$('taxDate').value||new Date().toISOString().slice(0,10),note:$('taxNote').value||'Impôt depuis le salon Impôts',createdAt:new Date().toISOString()})}
+function saveJudiciaireEntry(){let b=$('j_blame').value||'—';let amount=$('j_montant').value?Number($('j_montant').value):Number((b.match(/[0-9 ]+/)||['0'])[0].replaceAll(' ',''));if(!amount && !b.includes('Avertissement')){toast('Montant invalide');return}addFinanceEntry({personne:$('j_personne').value||'Personne inconnue',souffle:$('j_juridiction').value||'—',type:b.includes('Avertissement')?'Avertissement':'Amende reçue',montant:amount,statut:'Payé',date:$('j_date').value||new Date().toISOString().slice(0,10),note:$('j_raison').value||'Sanction judiciaire',createdAt:new Date().toISOString()})}
+function quickAddYens(){
+  let amount = Number($('quickAmount').value || 0);
+  if(!amount || amount <= 0){ toast('Montant invalide'); return; }
+  let type = $('quickType').value;
+  let entry = {
+    personne: $('quickName').value || 'Ajout rapide',
+    rang: '—',
+    souffle: '—',
+    montant: amount,
+    date: $('quickDate').value || new Date().toISOString().slice(0,10),
+    note: 'Ajout rapide depuis le tableau de bord',
+    createdAt: new Date().toISOString()
+  };
+  if(type === 'collecte'){
+    entry.type = 'Impôt collecté';
+    entry.statut = 'Payé';
+  } else if(type === 'recuperer'){
+    entry.type = 'Impôt collecté';
+    entry.statut = 'En attente';
+  } else {
+    entry.type = 'Prime versée';
+    entry.statut = 'Payé';
+  }
+  let l = list();
+  l.unshift(entry);
+  saveList(l);
+  $('quickAmount').value = '';
+  $('quickName').value = '';
+  render();
+  toast('Yens ajoutés');
+}
+
+function render(){
+  let l=list(),q=($('search')?.value||'').toLowerCase();
+  let f=l.filter(r=>Object.values(r).join(' ').toLowerCase().includes(q));
+  let tbody=$('tbody');
+  if(tbody){
+    tbody.innerHTML=f.map(r=>{let i=l.indexOf(r),cls=r.statut==='Payé'?'paid':r.statut==='Refusé'?'bad':'wait';return `<tr><td><span class="name">${r.personne||'—'}</span><br></td><td class="${cls}">${r.statut||'—'}</td><td>${r.type||'—'}</td><td>${signed(r)>=0?'+':'-'} ${fmt(Math.abs(signed(r)))}</td><td>${r.date||'—'}</td><td><button class="action ghost" onclick="loadEntry(${i})">✎</button> <button class="action danger" onclick="del(${i})">🗑</button></td></tr>`}).join('')||'<tr><td colspan="6" class="small">Aucune entrée.</td></tr>';
+  }
+  if($('latest')){
+    $('latest').innerHTML=f.slice(0,8).map(r=>`<div class="taxRow"><span>${r.personne||'—'} · ${r.type} · ${r.statut||'—'}</span><strong>${signed(r)>=0?'+':'-'} ${fmt(Math.abs(signed(r)))}</strong></div>`).join('')||'<p class="small">Aucune opération récente.</p>';
+  }
+  stats(l)
+}
+function stats(l){
+  let valid=l.filter(r=>r.statut!=='Refusé');
+  let collected=valid.filter(r=>r.statut==='Payé').reduce((s,r)=>s+Math.max(0,signed(r)),0);
+  let pending=valid.filter(r=>r.statut==='En attente').reduce((s,r)=>s+Math.max(0,signed(r)),0);
+  let outputs=valid.reduce((s,r)=>s+Math.abs(Math.min(0,signed(r))),0);
+  let paid=valid.filter(r=>r.statut==='Payé').length;
+  $('inStat').textContent=fmt(collected);
+  $('outStat').textContent=fmt(pending);
+  $('balanceStat').textContent=fmt(collected-outputs);
+  $('paidStat').textContent=paid+' / '+l.length;
+}
+function loadEntry(i){let r=list()[i];fields.forEach(f=>{if($(f))$(f).value=r[f]||''});showTab('new');toast('Entrée chargée')}function del(i){let l=list();l.splice(i,1);saveList(l);render();toast('Supprimé')}function deleteAll(){if(confirm('Supprimer tout le registre ?')){localStorage.removeItem(key);render();toast('Registre supprimé')}}
+function generateRP(){let r=data(),s=isOut(r)?'-':'+';$('rp').textContent=`💰 RAPPORT BFR — ${r.type}\n\n👤 Membre : ${r.personne||'—'}\n🌀 Souffle : ${r.souffle||'—'}\n📅 Date : ${r.date||'—'}\n💴 Montant : ${s} ${fmt(r.montant)}\n✅ Statut : ${r.statut||'—'}\n\n📝 Note :\n${r.note||'—'}\n\n— Validé par la Brigade des Finances et Relations.`;showTab('export');toast('RP généré')}
+function generateSummaryRP(){let l=list(),valid=l.filter(r=>r.statut!=='Refusé'),total=valid.reduce((s,r)=>s+signed(r),0);$('rp').textContent=`📊 RÉSUMÉ HEBDOMADAIRE BFR\n\nNombre d'opérations : ${l.length}\nSolde total : ${fmt(total)}\nMembres payés : ${valid.filter(r=>r.statut==='Payé').length}\nEn attente : ${l.filter(r=>r.statut==='En attente').length}\n\n— Rapport financier généré automatiquement.`;showTab('export')}
+function generateWarnRP(){let p=$('w_personne').value||'???',a=$('w_agent').value||'???',t=$('w_type').value||'—',c=$('w_cons').value||'—',r=$('w_raison').value||'—',d=$('w_date').value||'—';$('rp').textContent=`⚠️ AVERTISSEMENT BFR
+
+👤 Membre : ${p}
+👮 Donné par : ${a}
+📅 Date : ${d}
+
+⚠️ Type : ${t}
+📌 Conséquence : ${c}
+
+📝 Raison :
+${r}
+
+— Notification officielle de la Brigade.`;showTab('export');toast('Avertissement généré')}
+
+function generateFormationRP(){let p=$('f_prof').value||'—',c=$('f_cadet').value||'—',g=$('f_grade').value||'—',s=$('f_spec').value||'—',id=$('f_steam').value||'—';$('rp').textContent=`📋 REGISTRE DE FORMATION BFR
+
+Professeur : ${p}
+Cadet / financier : ${c}
+Grade / souffle : ${g}
+Spécialisation choisie : ${s}
+Steam ID : ${id}
+
+🕊️ Bien à vous,
+BFR`;showTab('export');toast('Registre généré')}
+
+function generateJudiciaireRP(){let p=$('j_personne').value||'???',a=$('j_agent').value||'???',b=$('j_blame').value||'—',j=$('j_juridiction').value||'—',r=$('j_raison').value||'—',d=$('j_date').value||'—',m=$('j_montant').value?fmt($('j_montant').value):(b.split('—')[1]||'—').trim();$('rp').textContent=`📗 RAPPORT JUDICIAIRE BFR
+
+Amende de ${p} appliquée par ${a}.
+
+⚖️ Sanction : ${b}
+💴 Montant : ${m}
+🏛️ Taxe de juridiction : ${j}
+📅 Date : ${d}
+
+Raison :
+${r}
+
+🕊️ Bien à vous !`;showTab('export');toast('Rapport judiciaire généré')}
+function downloadYens(){let backup={version:'bfr-yens-v1',date:new Date().toISOString(),entries:list()};let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(backup,null,2)],{type:'application/json'}));a.download='sauvegarde-bfr-yens.json';a.click();toast('Sauvegarde téléchargée')}
+function generateBackupText(){let backup={version:'bfr-yens-v1',date:new Date().toISOString(),entries:list()};$('backupText').value=JSON.stringify(backup,null,2);toast('Sauvegarde affichée')}
+function restoreBackupText(){
+  let raw = $('backupText').value.trim();
+  if(!raw){
+    toast('Colle une sauvegarde avant');
+    return;
+  }
+  try{
+    let data = JSON.parse(raw);
+    let entries = Array.isArray(data) ? data : data.entries;
+    if(!Array.isArray(entries)) throw new Error('format');
+    saveList(entries);
+    render();
+    toast('Sauvegarde restaurée');
+  }catch(e){
+    console.error(e);
+    toast('Format invalide');
+  }
+}
+
+function importYensFile(e){let file=e.target.files[0];if(!file)return;let reader=new FileReader();reader.onload=()=>{try{let data=JSON.parse(reader.result);let entries=Array.isArray(data)?data:data.entries;if(!Array.isArray(entries))throw new Error('format');saveList(entries);render();toast('Yens importés')}catch(err){toast('Fichier invalide')}};reader.readAsText(file)}
+function copyRP(){
+  let text = $('rp').textContent;
+  if(navigator.clipboard && window.isSecureContext){
+    navigator.clipboard.writeText(text).then(()=>toast('Copié')).catch(()=>fallbackCopy(text));
+  }else{
+    fallbackCopy(text);
+  }
+}
+function fallbackCopy(text){
+  let area=document.createElement('textarea');
+  area.value=text;
+  document.body.appendChild(area);
+  area.select();
+  try{document.execCommand('copy');toast('Copié')}catch(e){toast('Copie impossible')}
+  area.remove();
+}function exportJSON(){let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(list(),null,2)],{type:'application/json'}));a.download='registre-bfr-yens.json';a.click()}function toast(m){let t=$('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1500)}
+</script>
+</body>
+</html>
